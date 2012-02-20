@@ -1,0 +1,9 @@
+#!/bin/bash
+ln -snf ~/etc/bash/profile ~/.bashrc
+ln -snf ~/etc/bash/profile ~/.bash_profile
+ln -snf ~/etc/bash/profile ~/.profile
+ln -snf ~/etc/vim ~/.vimrc
+ln -snf ~/etc/terminator ~/.config/terminator/config
+ln -snf ~/etc/sublime ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
+ln -snf ~/etc/git/config ~/.gitconfig
+ln -snf ~/etc/git/ignore ~/.gitignore

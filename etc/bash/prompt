@@ -1,0 +1,37 @@
+function current-ruby {
+  echo "[$(rbenv version-name)]"
+}
+
+function git-branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+function hg-branch {
+  hg branch 2> /dev/null | sed -e 's/\(.*\)/[\1]/'
+}
+
+black='\[\e[0;30m\]'
+black2='\[\e[1;30m\]'
+red='\[\e[0;31m\]'
+red2='\[\e[1;31m\]'
+green='\[\e[0;32m\]'
+green2='\[\e[1;32m\]'
+yellow='\[\e[0;33m\]'
+yellow2='\[\e[1;33m\]'
+blue='\[\e[0;34m\]'
+blue2='\[\e[1;34m\]'
+purple='\[\e[0;35m\]'
+purple2='\[\e[0;35m\]'
+cyan='\[\e[0;36m\]'
+cyan2='\[\e[1;36m\]'
+white='\[\e[0;37m\]'
+white2='\[\e[1;37m\]'
+user='\u'
+host='\h'
+cpath='\w'
+colon=':'
+at='@'
+symbol='\$'
+newline='\n'
+
+PS1="${yellow}${user}${at}${host}${white}${colon}${cpath}${purple}\$(git-branch)\$(hg-branch)${red}\$(current-ruby)${yellow}${newline}${symbol} ${yellow2}"

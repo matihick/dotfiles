@@ -1,0 +1,55 @@
+function aur {
+  wget http://aur.archlinux.org/packages/$1/$1.tar.gz
+  tar -xzf $1.tar.gz
+  rm $1.tar.gz && cd $1 && makepkg -si
+}
+
+function git-branch-info {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+function rvmrc-create {
+  gemset=$(pwd | xargs basename)
+  if [ -z "$1" ]
+  then
+    echo "Enter the ruby version:"
+    read ruby-version
+  else
+    ruby-version=$1
+  fi
+  echo "rvm use ruby-${ruby-version}@${gemset} --create" > .rvmrc
+  cd .
+}
+
+function rvm-upgrade {
+  rvm get head
+  rvm reload
+}
+
+function rvm-info {
+  if [ -z $(rvm-prompt gemset) ]
+  then
+    echo ""
+  else
+    echo "[$(rvm-prompt)]"
+  fi
+}
+
+function pacman-improve-mirrors {
+  mirrors_url="http://www.archlinux.org/mirrorlist/?country=Brazil&country=Chile&country=Colombia&protocol=ftp&protocol=http&ip_version=4"
+  wget -qO- $mirrors_url | sed 's/#Server/Server/g' | sudo tee /etc/pacman.d/mirrorlist.all > /dev/null
+  rankmirrors -n 4 /etc/pacman.d/mirrorlist.all | sudo tee /etc/pacman.d/mirrorlist > /dev/null
+  sudo pacman -Syy
+}
+
+function reload {
+  . ~/.bashrc
+}
+
+function bash-copy-config {
+ cp ~/.bash_aliases ~/.bash_functions ~/.bash_profile ~/.bashrc ~/Dropbox/Linux/Config/Bash
+}
+
+function bash-import-config {
+ cp ~/Dropbox/Linux/Config/Bash/.bash* ~
+}

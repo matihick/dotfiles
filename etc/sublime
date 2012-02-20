@@ -1,0 +1,9 @@
+{
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "highlight_line": true,
+  "match_brackets_angle": true,
+  "default_line_ending": "unix",
+  "ensure_newline_at_eof_on_save": true
+}

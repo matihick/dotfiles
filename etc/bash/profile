@@ -1,0 +1,15 @@
+# if not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+. ~/etc/bash/options
+
+. ~/etc/bash/exports
+
+. ~/etc/bash/aliases
+
+. ~/etc/bash/functions
+
+. ~/etc/bash/prompt
+
+# rbenv
+eval "$(rbenv init -)"
