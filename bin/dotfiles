@@ -8,3 +8,4 @@ ln -snf ~/etc/terminator ~/.config/terminator/config
 ln -snf ~/etc/sublime ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
 ln -snf ~/etc/git/config ~/.gitconfig
 ln -snf ~/etc/git/ignore ~/.gitignore
+ln -snf ~/etc/ruby/gemrc ~/.gemrc
