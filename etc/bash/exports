@@ -6,4 +6,4 @@ export HISTCONTROL='ignoredups:ignorespace'
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
-export PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/bin:$PATH"

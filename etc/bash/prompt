@@ -1,15 +1,3 @@
-function current-ruby {
-  echo "[$(rbenv version-name)]"
-}
-
-function git-branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
-}
-
-function hg-branch {
-  hg branch 2> /dev/null | sed -e 's/\(.*\)/[\1]/'
-}
-
 black='\[\e[0;30m\]'
 black2='\[\e[1;30m\]'
 red='\[\e[0;31m\]'
