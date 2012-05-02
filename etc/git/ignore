@@ -2,7 +2,9 @@
 Thumbs.db
 *.sublime-project
 *.sublime-workspace
-.bundle
 .rvmrc
+.rbenv-version
+.rbenv-gemsets
+.bundle
 .svn
 .hg
