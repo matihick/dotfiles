@@ -1,3 +1,0 @@
-#!/bin/bash
-mkdir -p .bundle
-echo "BUNDLE_PATH: ~/.bundle/`pwd | xargs basename`" > .bundle/config

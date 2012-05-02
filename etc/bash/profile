@@ -1,6 +1,14 @@
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+# rbenv
+eval "$(rbenv init -)"
+
 . ~/etc/bash/options
 
 . ~/etc/bash/exports
@@ -10,6 +18,3 @@
 . ~/etc/bash/functions
 
 . ~/etc/bash/prompt
-
-# rbenv
-eval "$(rbenv init -)"
