@@ -4,8 +4,7 @@ ln -snf ~/etc/bash/profile ~/.bash_profile
 ln -snf ~/etc/bash/profile ~/.profile
 ln -snf ~/etc/bash/input ~/.inputrc
 ln -snf ~/etc/vim ~/.vimrc
-ln -snf ~/etc/terminator ~/.config/terminator/config
-ln -snf ~/etc/sublime ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
+ln -snf ~/etc/sublime ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 ln -snf ~/etc/git/config ~/.gitconfig
 ln -snf ~/etc/git/ignore ~/.gitignore
 ln -snf ~/etc/ruby/gemrc ~/.gemrc
